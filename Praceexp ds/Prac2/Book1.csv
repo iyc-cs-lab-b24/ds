@@ -1,0 +1,16 @@
+Item,Qty,Rate,Amount
+CCD,3,4,12
+HHD,4,4,16
+SSD,6,53,318
+Camera,6,2,12
+Keyword,77,4,
+CCD,,2,12
+HHD,2,4,88
+SSD,2,2,
+Camera,3,4,12
+Keyword,2,,10
+CCD,4,5,20
+HHD,2,3,6
+SSD,3,5,15
+Camera,32,3,96
+Keyword,2,3,6
